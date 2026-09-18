@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="د. عمر الدناصوري — استشاري وأستاذ مساعد جراحة المخ والأعصاب والعمود الفقري. للحجز والاستفسار عبر واتساب أو الهاتف.">
+<meta name="theme-color" content="#f5f9fa">
+<title>د. عمر الدناصوري | جراحة المخ والأعصاب والعمود الفقري</title>
+
+<!-- Replace G-XXXXXXXXXX with the real GA4 Measurement ID -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-XXXXXXXXXX');
+</script>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root{
+  --ink:#102f45;
+  --ink-2:#254c61;
+  --muted:#6d818b;
+  --blue:#2d708b;
+  --blue-pale:#edf5f7;
+  --gold:#b59663;
+  --green:#0a9868;
+  --line:#dbe7eb;
+  --paper:#f7fafb;
+  --white:#fff;
+  --shadow:0 18px 55px rgba(16,47,69,.10);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:#fff;color:var(--ink);
+  font-family:"Cairo",Arial,sans-serif;line-height:1.75;
+}
+body.en{font-family:"Manrope",Arial,sans-serif}
+a{text-decoration:none;color:inherit}
+button{font:inherit}
+.container{width:min(1180px,92%);margin:auto}
+
+/* Header */
+.header{
+  position:sticky;top:0;z-index:100;background:rgba(255,255,255,.88);
+  backdrop-filter:blur(16px);border-bottom:1px solid rgba(219,231,235,.8)
+}
+.nav{height:74px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{display:flex;align-items:center;gap:11px}
+.logo-mark{
+  width:40px;height:40px;border:1px solid var(--gold);border-radius:50%;
+  display:grid;place-items:center;font-weight:800;color:var(--ink);background:#fbfaf6
+}
+.logo-title{font-weight:800;font-size:.95rem;line-height:1.2}
+.logo-sub{font-size:.64rem;color:var(--muted);margin-top:2px}
+.nav-links{display:flex;gap:27px}
+.nav-links a{font-size:.79rem;font-weight:700;color:#486473}
+.nav-links a:hover{color:var(--ink)}
+.nav-right{display:flex;align-items:center;gap:8px}
+.lang{
+  border:1px solid var(--line);background:#fff;border-radius:999px;
+  padding:8px 13px;color:var(--ink);font-weight:800;font-size:.75rem;cursor:pointer
+}
+.nav-book{
+  background:var(--ink);color:#fff;border-radius:999px;padding:9px 16px;
+  font-size:.75rem;font-weight:800
+}
+
+/* Hero */
+.hero{
+  position:relative;overflow:hidden;
+  background:
+    radial-gradient(circle at 83% 20%,rgba(45,112,139,.10),transparent 26%),
+    linear-gradient(120deg,#fbfcfc 0%,#f2f8f9 62%,#f9fbfb 100%);
+}
+.hero-art{
+  position:absolute;inset:0;pointer-events:none;overflow:hidden
+}
+.hero-art .brain{position:absolute;width:430px;right:-90px;top:-100px}
+.hero-art .spine{position:absolute;width:210px;left:-40px;bottom:-170px}
+.hero-grid{
+  min-height:650px;display:grid;grid-template-columns:1.04fr .96fr;
+  gap:75px;align-items:center;padding:58px 0 68px;position:relative
+}
+.hero-copy{position:relative;z-index:2}
+.eyebrow{
+  color:var(--gold);font-size:.82rem;font-weight:800;
+  display:flex;align-items:center;gap:9px;margin-bottom:14px
+}
+.eyebrow:before{content:"";width:35px;height:1px;background:var(--gold)}
+h1{
+  margin:0;font-size:clamp(3rem,5.2vw,5rem);line-height:1.08;
+  letter-spacing:-1.5px;color:var(--ink);font-weight:800
+}
+.hero-role{
+  margin:18px 0 13px;color:var(--ink-2);font-size:clamp(1.12rem,2vw,1.45rem);
+  line-height:1.65;font-weight:800;max-width:640px
+}
+.hero-desc{
+  margin:0;color:var(--muted);font-size:.96rem;line-height:2;max-width:650px
+}
+.cred-row{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 27px}
+.cred{
+  border:1px solid var(--line);background:rgba(255,255,255,.75);
+  padding:7px 12px;border-radius:999px;color:var(--ink);font-size:.72rem;font-weight:700
+}
+.cta{display:flex;gap:10px;flex-wrap:wrap}
+.btn{
+  min-height:51px;padding:0 21px;border-radius:13px;display:inline-flex;
+  align-items:center;justify-content:center;gap:8px;font-weight:800;font-size:.82rem;
+  transition:.2s ease
+}
+.btn:hover{transform:translateY(-2px);box-shadow:0 11px 25px rgba(16,47,69,.12)}
+.primary{background:var(--ink);color:#fff}
+.whatsapp{background:var(--green);color:#fff}
+.outline{background:#fff;border:1px solid var(--line);color:var(--ink)}
+
+/* Portrait is intentionally clean — nothing sits on top of it */
+.hero-photo{
+  position:relative;z-index:2;display:flex;justify-content:center
+}
+.photo{
+  width:min(470px,100%);height:545px;object-fit:cover;object-position:center top;
+  display:block;border-radius:30px;background:#e5eff2;box-shadow:var(--shadow);
+  border:1px solid rgba(255,255,255,.9)
+}
+.photo-note{
+  margin-top:14px;text-align:center;color:var(--muted);font-size:.68rem;
+  font-weight:600
+}
+
+/* Quick facts */
+.facts{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#fff}
+.fact-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+.fact{padding:19px 18px;text-align:center;border-left:1px solid var(--line)}
+.fact:last-child{border-left:0}
+.fact b{display:block;color:var(--ink);font-size:.82rem}
+.fact span{display:block;color:var(--muted);font-size:.66rem;margin-top:2px}
+
+/* Sections */
+section{padding:80px 0}
+.section-title{text-align:center;max-width:720px;margin:0 auto 40px}
+.section-title small{
+  color:var(--gold);font-family:"Manrope";font-weight:800;font-size:.67rem;
+  letter-spacing:2px
+}
+.section-title h2{margin:7px 0 9px;color:var(--ink);font-size:2.2rem;line-height:1.35}
+.section-title p{margin:0;color:var(--muted);font-size:.88rem}
+
+/* About */
+.about-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:22px}
+.clean-card{
+  border:1px solid var(--line);border-radius:21px;padding:29px;background:#fff
+}
+.clean-card h3{margin:0 0 9px;font-size:1.1rem;color:var(--ink)}
+.clean-card p{margin:0;color:var(--muted);font-size:.86rem}
+.quote{
+  background:var(--ink);color:#fff;border-radius:21px;padding:29px;
+  position:relative;overflow:hidden
+}
+.quote:after{
+  content:"“";position:absolute;left:16px;top:-35px;font-family:Georgia;
+  font-size:150px;color:rgba(255,255,255,.07)
+}
+.quote strong{display:block;font-size:1.05rem;position:relative}
+.quote span{display:block;color:#c7d8df;font-size:.78rem;margin-top:9px;position:relative}
+
+/* Specialties */
+.specialties{background:var(--paper);position:relative;overflow:hidden}
+.specialties .spine-bg{
+  position:absolute;width:180px;left:-30px;top:30px;opacity:.55;pointer-events:none
+}
+.specialty-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;position:relative}
+.specialty{
+  min-height:185px;background:#fff;border:1px solid var(--line);border-radius:19px;
+  padding:24px;display:flex;flex-direction:column;justify-content:flex-end;
+  position:relative;overflow:hidden
+}
+.specialty:after{
+  content:"";position:absolute;right:-35px;top:-45px;width:120px;height:120px;
+  border-radius:50%;background:var(--blue-pale)
+}
+.specialty .num{font-family:"Manrope";font-size:.67rem;color:var(--gold);font-weight:800;position:relative;z-index:1}
+.specialty h3{font-size:.97rem;margin:10px 0 5px;color:var(--ink);position:relative;z-index:1}
+.specialty p{font-size:.7rem;color:var(--muted);margin:0;position:relative;z-index:1}
+
+/* Qualifications */
+.qual-grid{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+.qual{
+  display:flex;gap:14px;border:1px solid var(--line);border-radius:17px;
+  padding:19px;background:#fff
+}
+.qual-no{
+  width:34px;height:34px;flex:0 0 34px;border-radius:50%;
+  background:var(--blue-pale);color:var(--blue);display:grid;place-items:center;
+  font-family:"Manrope";font-size:.68rem;font-weight:800
+}
+.qual strong{display:block;color:var(--ink);font-size:.8rem;line-height:1.55}
+.qual span{display:block;color:var(--muted);font-size:.68rem;margin-top:3px}
+
+/* Academic */
+.academic{background:var(--paper)}
+.members{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.member{
+  padding:16px 18px;background:#fff;border:1px solid var(--line);border-radius:15px;
+  font-size:.75rem;font-weight:700;color:var(--ink)
+}
+
+/* Clinic */
+.clinic{
+  position:relative;overflow:hidden;
+  background:
+    radial-gradient(circle at 15% 85%,rgba(181,150,99,.10),transparent 22%),
+    linear-gradient(135deg,#f2f8f9,#fff)
+}
+.clinic-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:22px}
+.hours .row{
+  display:flex;justify-content:space-between;gap:15px;padding:14px 0;
+  border-bottom:1px solid var(--line);font-size:.78rem
+}
+.hours .row:last-child{border-bottom:0}
+.hours strong{color:var(--ink)}
+.hours span{color:var(--muted)}
+.address{color:var(--muted);font-size:.84rem;margin:0 0 21px}
+.map{width:100%}
+
+/* Contact */
+.contact{
+  background:var(--ink);color:#fff;text-align:center;padding:75px 0 90px;
+  position:relative;overflow:hidden
+}
+.contact:before,.contact:after{
+  content:"";position:absolute;border:1px solid rgba(255,255,255,.07);border-radius:50%
+}
+.contact:before{width:500px;height:500px;left:-270px;top:-250px}
+.contact:after{width:350px;height:350px;right:-190px;bottom:-220px}
+.contact h2{position:relative;margin:0 0 10px;font-size:2.35rem}
+.contact p{position:relative;color:#c9dce4;max-width:590px;margin:0 auto 26px;font-size:.88rem}
+.contact .outline{background:transparent;color:#fff;border-color:rgba(255,255,255,.25)}
+.contact .primary{background:var(--gold)}
+
+/* Footer */
+footer{background:#082334;color:#9fb6c1;text-align:center;padding:22px;font-size:.68rem}
+
+/* Call confirmation */
+.modal{
+  position:fixed;inset:0;z-index:999;background:rgba(4,24,36,.58);
+  display:none;align-items:center;justify-content:center;padding:20px;
+  backdrop-filter:blur(5px)
+}
+.modal.open{display:flex}
+.modal-box{
+  width:min(390px,100%);background:#fff;border-radius:23px;padding:28px;
+  box-shadow:0 30px 80px rgba(0,0,0,.25);text-align:center
+}
+.modal-icon{
+  width:52px;height:52px;border-radius:50%;background:var(--blue-pale);
+  display:grid;place-items:center;margin:0 auto 13px;color:var(--ink);font-size:23px
+}
+.modal h3{margin:0;color:var(--ink);font-size:1.15rem}
+.modal p{margin:6px 0;color:var(--muted);font-size:.8rem}
+.modal-number{direction:ltr;font-family:"Manrope";font-weight:800;color:var(--ink);margin:2px 0 19px}
+.modal-actions{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.modal-actions button{height:46px;border:0;border-radius:11px;font-weight:800;cursor:pointer}
+.cancel{background:#f1f5f6;color:var(--ink)}
+.confirm{background:var(--ink);color:#fff}
+
+/* Mobile */
+.mobile-actions{display:none}
+@media(max-width:980px){
+  .nav-links{display:none}
+  .hero-grid{grid-template-columns:1fr;gap:36px;text-align:center}
+  .hero-copy{order:2}
+  .hero-photo{order:1}
+  .eyebrow{justify-content:center}
+  .hero-desc{margin:auto}
+  .cred-row,.cta{justify-content:center}
+  .photo{height:500px;max-width:420px}
+  .about-grid,.clinic-grid{grid-template-columns:1fr}
+  .specialty-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:650px){
+  body{padding-bottom:66px}
+  .nav{height:64px}
+  .logo-sub{font-size:.56rem}
+  .nav-book{display:none}
+  .hero-grid{padding:38px 0 52px}
+  h1{font-size:2.65rem}
+  .hero-role{font-size:1.03rem}
+  .hero-desc{font-size:.83rem}
+  .cred{font-size:.66rem}
+  .buttons,.cta .btn{width:100%}
+  .photo{height:430px;border-radius:25px}
+  .facts{display:none}
+  section{padding:60px 0}
+  .section-title h2{font-size:1.8rem}
+  .specialty-grid,.qual-grid,.members{grid-template-columns:1fr}
+  .specialty{min-height:155px}
+  .mobile-actions{
+    display:flex;position:fixed;bottom:0;left:0;right:0;z-index:300;
+    background:#fff;border-top:1px solid var(--line);padding:8px;gap:7px;
+    box-shadow:0 -10px 30px rgba(0,0,0,.08)
+  }
+  .mobile-actions a{
+    flex:1;text-align:center;padding:10px 4px;border-radius:10px;
+    font-size:.72rem;font-weight:800
+  }
+  .mobile-actions .wa{background:var(--green);color:#fff}
+  .mobile-actions .book{background:#f2eadd;color:var(--ink)}
+  .mobile-actions .call{background:var(--ink);color:#fff}
+}
+</style>
+</head>
+
+<body>
+<header class="header">
+  <div class="container nav">
+    <a class="logo" href="#home">
+      <div class="logo-mark">ع</div>
+      <div>
+        <div class="logo-title" data-ar="د. عمر الدناصوري" data-en="Dr. Omar Eldanasory">د. عمر الدناصوري</div>
+        <div class="logo-sub" data-ar="جراحة المخ والأعصاب والعمود الفقري" data-en="Neurosurgery & Spine Surgery">جراحة المخ والأعصاب والعمود الفقري</div>
+      </div>
+    </a>
+    <nav class="nav-links">
+      <a href="#about" data-ar="عن الدكتور" data-en="About">عن الدكتور</a>
+      <a href="#specialties" data-ar="التخصصات" data-en="Specialties">التخصصات</a>
+      <a href="#qualifications" data-ar="المؤهلات" data-en="Qualifications">المؤهلات</a>
+      <a href="#clinic" data-ar="العيادة" data-en="Clinic">العيادة</a>
+      <a href="#contact" data-ar="الحجز" data-en="Book">الحجز</a>
+    </nav>
+    <div class="nav-right">
+      <button class="lang" id="langToggle">English</button>
+      <a class="nav-book" href="#contact" data-ar="احجز موعدك" data-en="Book Appointment">احجز موعدك</a>
+    </div>
+  </div>
+</header>
+
+<main id="home">
+
+<section class="hero">
+  <div class="hero-art">
+    <img class="brain" src="assets/brain.svg" alt="" aria-hidden="true">
+    <img class="spine" src="assets/spine.svg" alt="" aria-hidden="true">
+  </div>
+
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <div class="eyebrow" data-ar="خبرة أكاديمية • تدريب دولي • تخصص دقيق" data-en="Academic expertise • International training • Specialized care">خبرة أكاديمية • تدريب دولي • تخصص دقيق</div>
+      <h1 data-ar="د. عمر الدناصوري" data-en="Dr. Omar Eldanasory">د. عمر الدناصوري</h1>
+      <div class="hero-role" data-ar="استشاري وأستاذ مساعد جراحة المخ والأعصاب والعمود الفقري – جامعة الأزهر" data-en="Consultant & Assistant Professor of Neurosurgery and Spine Surgery – Al-Azhar University">استشاري وأستاذ مساعد جراحة المخ والأعصاب والعمود الفقري – جامعة الأزهر</div>
+      <p class="hero-desc" data-ar="دكتوراه جراحة المخ والأعصاب والعمود الفقري، مع زمالات وتدريب دولي في جراحات العمود الفقري وجراحة المخ والأعصاب للبالغين والأطفال." data-en="MD/PhD in Neurosurgery and Spine Surgery, with international fellowships and advanced training in adult and pediatric neurosurgery and spine surgery.">دكتوراه جراحة المخ والأعصاب والعمود الفقري، مع زمالات وتدريب دولي في جراحات العمود الفقري وجراحة المخ والأعصاب للبالغين والأطفال.</p>
+
+      <div class="cred-row">
+        <span class="cred" data-ar="دكتوراه جراحة المخ والأعصاب" data-en="MD/PhD in Neurosurgery">دكتوراه جراحة المخ والأعصاب</span>
+        <span class="cred" data-ar="زمالة الكلية الأمريكية للجراحين – USA" data-en="American College of Surgeons Fellowship – USA">زمالة الكلية الأمريكية للجراحين – USA</span>
+        <span class="cred" data-ar="زمالة جراحات العمود الفقري – لندن" data-en="Spine Surgery Fellowship – London">زمالة جراحات العمود الفقري – لندن</span>
+      </div>
+
+      <div class="cta">
+        <a class="btn primary" href="#contact" data-ar="احجز موعدك الآن" data-en="Book an Appointment">احجز موعدك الآن</a>
+        <a class="btn whatsapp" href="https://wa.me/201205115256" target="_blank" rel="noopener" onclick="trackConversion('whatsapp_click')" data-ar="واتساب" data-en="WhatsApp">واتساب</a>
+        <a class="btn outline" href="#" onclick="openCallModal(event)" data-ar="اتصل الآن" data-en="Call Now">اتصل الآن</a>
+      </div>
+    </div>
+
+    <div class="hero-photo">
+      <div>
+        <img class="photo"
+          src="https://cdn-dr-images.vezeeta.com/Assets/Images/SelfServiceDoctors/ENT979e734a08921988/Facilities/doctor-omar-eldanasory-neurosurgery_20230703081852443.jpg"
+          alt="د. عمر الدناصوري">
+        <div class="photo-note" data-ar="استشاري جراحة المخ والأعصاب والعمود الفقري للبالغين والأطفال" data-en="Consultant Neurosurgery & Spine Surgery for adults and children">استشاري جراحة المخ والأعصاب والعمود الفقري للبالغين والأطفال</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="facts">
+  <div class="container fact-grid">
+    <div class="fact"><b data-ar="أكاديمي وباحث" data-en="Academic & Research">أكاديمي وباحث</b><span data-ar="عضو هيئة التدريس بكلية الطب" data-en="Faculty member">عضو هيئة التدريس بكلية الطب</span></div>
+    <div class="fact"><b data-ar="زمالات دولية" data-en="International Fellowships">زمالات دولية</b><span data-ar="الولايات المتحدة والمملكة المتحدة" data-en="USA & United Kingdom">الولايات المتحدة والمملكة المتحدة</span></div>
+    <div class="fact"><b data-ar="للبالغين والأطفال" data-en="Adults & Children">للبالغين والأطفال</b><span data-ar="مخ وأعصاب وعمود فقري" data-en="Neurosurgery & Spine">مخ وأعصاب وعمود فقري</span></div>
+    <div class="fact"><b data-ar="مدينة نصر" data-en="Nasr City">مدينة نصر</b><span data-ar="مواعيد يومية" data-en="Daily clinic hours">مواعيد يومية</span></div>
+  </div>
+</div>
+
+<section id="about">
+  <div class="container">
+    <div class="section-title">
+      <small>ABOUT</small>
+      <h2 data-ar="عن د. عمر الدناصوري" data-en="About Dr. Omar Eldanasory">عن د. عمر الدناصوري</h2>
+      <p data-ar="خبرة أكاديمية ومهنية مدعومة بتدريب دولي متخصص." data-en="Academic and professional experience supported by specialized international training.">خبرة أكاديمية ومهنية مدعومة بتدريب دولي متخصص.</p>
+    </div>
+    <div class="about-grid">
+      <div class="clean-card">
+        <h3 data-ar="الخبرة والتخصص" data-en="Experience & Specialty">الخبرة والتخصص</h3>
+        <p data-ar="د. عمر الدناصوري استشاري وأستاذ مساعد جراحة المخ والأعصاب والعمود الفقري وعضو هيئة التدريس بكلية الطب – جامعة الأزهر. تشمل مجالات تخصصه جراحات المخ والأعصاب للبالغين والأطفال، وجراحات العمود الفقري للبالغين والأطفال." data-en="Dr. Omar Eldanasory is a Consultant and Assistant Professor of Neurosurgery and Spine Surgery and a faculty member at Al-Azhar University. His specialties include adult and pediatric neurosurgery and adult and pediatric spine surgery.">د. عمر الدناصوري استشاري وأستاذ مساعد جراحة المخ والأعصاب والعمود الفقري وعضو هيئة التدريس بكلية الطب – جامعة الأزهر. تشمل مجالات تخصصه جراحات المخ والأعصاب للبالغين والأطفال، وجراحات العمود الفقري للبالغين والأطفال.</p>
+      </div>
+      <div class="quote">
+        <strong data-ar="تخصص دقيق، تدريب دولي، وخبرة أكاديمية" data-en="Specialized care, international training, and academic experience">تخصص دقيق، تدريب دولي، وخبرة أكاديمية</strong>
+        <span data-ar="الولايات المتحدة الأمريكية • المملكة المتحدة" data-en="United States • United Kingdom">الولايات المتحدة الأمريكية • المملكة المتحدة</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="specialties" id="specialties">
+  <img class="spine-bg" src="assets/spine.svg" alt="" aria-hidden="true">
+  <div class="container">
+    <div class="section-title">
+      <small>SPECIALTIES</small>
+      <h2 data-ar="مجالات التخصص" data-en="Areas of Specialization">مجالات التخصص</h2>
+      <p data-ar="جراحات المخ والأعصاب والعمود الفقري للبالغين والأطفال." data-en="Neurosurgery and spine surgery for adults and children.">جراحات المخ والأعصاب والعمود الفقري للبالغين والأطفال.</p>
+    </div>
+    <div class="specialty-grid">
+      <article class="specialty"><div class="num">01</div><h3 data-ar="جراحات المخ والأعصاب للبالغين" data-en="Adult Neurosurgery">جراحات المخ والأعصاب للبالغين</h3><p data-ar="تقييم وعلاج الحالات الجراحية العصبية للبالغين." data-en="Assessment and surgical management of adult neurosurgical conditions.">تقييم وعلاج الحالات الجراحية العصبية للبالغين.</p></article>
+      <article class="specialty"><div class="num">02</div><h3 data-ar="جراحات المخ والأعصاب للأطفال" data-en="Pediatric Neurosurgery">جراحات المخ والأعصاب للأطفال</h3><p data-ar="رعاية متخصصة للحالات العصبية والجراحية لدى الأطفال." data-en="Specialized care for pediatric neurosurgical conditions.">رعاية متخصصة للحالات العصبية والجراحية لدى الأطفال.</p></article>
+      <article class="specialty"><div class="num">03</div><h3 data-ar="جراحات العمود الفقري للبالغين" data-en="Adult Spine Surgery">جراحات العمود الفقري للبالغين</h3><p data-ar="تقييم وعلاج مشكلات العمود الفقري وجراحاته." data-en="Assessment and surgical management of adult spine conditions.">تقييم وعلاج مشكلات العمود الفقري وجراحاته.</p></article>
+      <article class="specialty"><div class="num">04</div><h3 data-ar="جراحات العمود الفقري للأطفال" data-en="Pediatric Spine Surgery">جراحات العمود الفقري للأطفال</h3><p data-ar="تخصص في حالات وتشوهات العمود الفقري لدى الأطفال." data-en="Specialized care for pediatric spine conditions and deformities.">تخصص في حالات وتشوهات العمود الفقري لدى الأطفال.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="qualifications">
+  <div class="container">
+    <div class="section-title">
+      <small>QUALIFICATIONS</small>
+      <h2 data-ar="المؤهلات والزمالات" data-en="Qualifications & Fellowships">المؤهلات والزمالات</h2>
+    </div>
+    <div class="qual-grid">
+      <div class="qual"><div class="qual-no">01</div><div><strong data-ar="دكتوراه جراحة المخ والأعصاب والعمود الفقري" data-en="MD/PhD in Neurosurgery & Spine Surgery">دكتوراه جراحة المخ والأعصاب والعمود الفقري</strong><span data-ar="مؤهل أكاديمي متقدم." data-en="Advanced academic qualification.">مؤهل أكاديمي متقدم.</span></div></div>
+      <div class="qual"><div class="qual-no">02</div><div><strong data-ar="زمالة الكلية الأمريكية للجراحين – الولايات المتحدة الأمريكية" data-en="American College of Surgeons Fellowship – USA">زمالة الكلية الأمريكية للجراحين – الولايات المتحدة الأمريكية</strong><span data-ar="Fellowship – American College of Surgeons." data-en="Fellowship – American College of Surgeons.">Fellowship – American College of Surgeons.</span></div></div>
+      <div class="qual"><div class="qual-no">03</div><div><strong data-ar="دبلوم عربي في جراحات العمود الفقري وتشوهاته" data-en="Arab Diploma in Spine Surgery & Deformities">دبلوم عربي في جراحات العمود الفقري وتشوهاته</strong><span data-ar="تخصص في جراحات العمود الفقري وتشوهاته." data-en="Specialized diploma in spine surgery and deformities.">تخصص في جراحات العمود الفقري وتشوهاته.</span></div></div>
+      <div class="qual"><div class="qual-no">04</div><div><strong data-ar="زمالة جراحات العمود الفقري – Stanmore, London" data-en="Spine Surgery Fellowship – Stanmore, London">زمالة جراحات العمود الفقري – Stanmore, London</strong><span data-ar="Royal Orthopaedic Hospital – UK." data-en="Royal Orthopaedic Hospital – UK.">Royal Orthopaedic Hospital – UK.</span></div></div>
+      <div class="qual"><div class="qual-no">05</div><div><strong data-ar="خبرة مهنية – Johns Hopkins Aramco Health Care Center" data-en="Professional Experience – Johns Hopkins Aramco Health Care Center">خبرة مهنية – Johns Hopkins Aramco Health Care Center</strong><span data-ar="خبرة مهنية في بيئة رعاية صحية دولية." data-en="Professional experience in an international healthcare setting.">خبرة مهنية في بيئة رعاية صحية دولية.</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="academic" id="academic">
+  <div class="container">
+    <div class="section-title">
+      <small>ACADEMIC PROFILE</small>
+      <h2 data-ar="العضويات والمساهمات العلمية" data-en="Professional & Academic Profile">العضويات والمساهمات العلمية</h2>
+    </div>
+    <div class="members">
+      <div class="member" data-ar="عضو الكلية الأمريكية للجراحين" data-en="Member – American College of Surgeons">عضو الكلية الأمريكية للجراحين</div>
+      <div class="member" data-ar="عضو North American Spine Society (NASS)" data-en="Member – North American Spine Society (NASS)">عضو North American Spine Society (NASS)</div>
+      <div class="member" data-ar="عضو AO Spine" data-en="Member – AO Spine">عضو AO Spine</div>
+      <div class="member" data-ar="عضو الجمعية العربية لجراحات وتشوهات العمود الفقري" data-en="Member – Arab Society for Spine Surgery & Deformities">عضو الجمعية العربية لجراحات وتشوهات العمود الفقري</div>
+      <div class="member" data-ar="عضو الجمعية المصرية لجراحات المخ والأعصاب والعمود الفقري" data-en="Member – Egyptian Society of Neurosurgery & Spine Surgery">عضو الجمعية المصرية لجراحات المخ والأعصاب والعمود الفقري</div>
+      <div class="member" data-ar="مراجع في مجلات علمية متخصصة" data-en="Reviewer for specialized scientific journals">مراجع في مجلات علمية متخصصة</div>
+      <div class="member" data-ar="محرر في مجلات طبية دولية" data-en="Editor for international medical journals">محرر في مجلات طبية دولية</div>
+      <div class="member" data-ar="باحث ومساهم في البحث العلمي" data-en="Researcher & academic contributor">باحث ومساهم في البحث العلمي</div>
+      <div class="member" data-ar="عضو هيئة التدريس بكلية الطب – جامعة الأزهر" data-en="Faculty member – Al-Azhar University">عضو هيئة التدريس بكلية الطب – جامعة الأزهر</div>
+    </div>
+  </div>
+</section>
+
+<section class="clinic" id="clinic">
+  <div class="container">
+    <div class="section-title">
+      <small>CLINIC</small>
+      <h2 data-ar="مواعيد وموقع العيادة" data-en="Clinic Hours & Location">مواعيد وموقع العيادة</h2>
+    </div>
+    <div class="clinic-grid">
+      <div class="clean-card hours">
+        <h3 data-ar="مواعيد العيادة" data-en="Clinic Hours">مواعيد العيادة</h3>
+        <div class="row"><strong data-ar="السبت – الخميس" data-en="Saturday – Thursday">السبت – الخميس</strong><span>4:00 PM – 10:30 PM</span></div>
+        <div class="row"><strong data-ar="الجمعة" data-en="Friday">الجمعة</strong><span>5:00 PM – 8:00 PM</span></div>
+      </div>
+      <div class="clean-card">
+        <h3 data-ar="عنوان العيادة" data-en="Clinic Address">عنوان العيادة</h3>
+        <p class="address" data-ar="فوق معرض أحمد نبيل للبدل، ٧ شارع أحمد الزمر، الحي العاشر، مدينة نصر، القاهرة، مصر." data-en="Above Ahmed Nabil Suits, 7 Ahmed El-Zomor, Al Hay Al Asher, Nasr City, Cairo, Egypt.">فوق معرض أحمد نبيل للبدل، ٧ شارع أحمد الزمر، الحي العاشر، مدينة نصر، القاهرة، مصر.</p>
+        <a class="btn primary map" href="https://maps.app.goo.gl/sGCsoTeqMN8PBXzJA" target="_blank" rel="noopener" onclick="trackConversion('maps_click')" data-ar="📍 عرض الموقع على Google Maps" data-en="📍 View on Google Maps">📍 عرض الموقع على Google Maps</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="section-title" style="position:relative;margin-bottom:25px">
+      <small style="color:#d7bd8e">BOOK YOUR APPOINTMENT</small>
+      <h2 style="color:#fff" data-ar="احجز موعدك مع د. عمر الدناصوري" data-en="Book an Appointment with Dr. Omar Eldanasory">احجز موعدك مع د. عمر الدناصوري</h2>
+      <p style="color:#c9dce4" data-ar="للحجز والاستفسار، تواصل مباشرة عبر واتساب أو الهاتف." data-en="For appointments and inquiries, contact the clinic directly via WhatsApp or phone.">للحجز والاستفسار، تواصل مباشرة عبر واتساب أو الهاتف.</p>
+    </div>
+    <div class="cta" style="position:relative;justify-content:center">
+      <a class="btn whatsapp" href="https://wa.me/201205115256?text=مرحباً،%20أرغب%20في%20حجز%20موعد%20مع%20د.%20عمر%20الدناصوري" target="_blank" rel="noopener" onclick="trackConversion('whatsapp_click')" data-ar="احجز عبر واتساب" data-en="Book via WhatsApp">احجز عبر واتساب</a>
+      <a class="btn primary" href="#" onclick="openCallModal(event)" data-ar="اتصل الآن" data-en="Call Now">اتصل الآن</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <span data-ar="د. عمر الدناصوري | جراحة المخ والأعصاب والعمود الفقري" data-en="Dr. Omar Eldanasory | Neurosurgery & Spine Surgery">د. عمر الدناصوري | جراحة المخ والأعصاب والعمود الفقري</span>
+</footer>
+
+<div class="mobile-actions">
+  <a class="wa" href="https://wa.me/201205115256" target="_blank" rel="noopener" onclick="trackConversion('whatsapp_click')" data-ar="واتساب" data-en="WhatsApp">واتساب</a>
+  <a class="book" href="#contact" data-ar="احجز الآن" data-en="Book Now">احجز الآن</a>
+  <a class="call" href="#" onclick="openCallModal(event)" data-ar="اتصل" data-en="Call">اتصل</a>
+</div>
+
+<div class="modal" id="callModal" role="dialog" aria-modal="true" aria-labelledby="callTitle">
+  <div class="modal-box">
+    <div class="modal-icon">☎</div>
+    <h3 id="callTitle" data-ar="اتصال هاتفي" data-en="Phone Call">اتصال هاتفي</h3>
+    <p data-ar="هل تريد الاتصال بالرقم التالي؟" data-en="Would you like to call the following number?">هل تريد الاتصال بالرقم التالي؟</p>
+    <div class="modal-number">+20 12 05115256</div>
+    <div class="modal-actions">
+      <button class="cancel" onclick="closeCallModal()" data-ar="إلغاء" data-en="Cancel">إلغاء</button>
+      <button class="confirm" onclick="confirmCall()" data-ar="نعم، اتصل" data-en="Yes, Call">نعم، اتصل</button>
+    </div>
+  </div>
+</div>
+
+<script>
+let currentLang = 'ar';
+const PHONE = '+201205115256';
+
+function applyLanguage(lang){
+  currentLang = lang;
+  document.documentElement.lang = lang;
+  document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+  document.body.classList.toggle('en', lang === 'en');
+  document.querySelectorAll('[data-ar][data-en]').forEach(el => {
+    el.textContent = el.dataset[lang];
+  });
+  document.getElementById('langToggle').textContent = lang === 'ar' ? 'English' : 'العربية';
+}
+document.getElementById('langToggle').addEventListener('click', () => {
+  applyLanguage(currentLang === 'ar' ? 'en' : 'ar');
+});
+
+function openCallModal(e){
+  if(e) e.preventDefault();
+  document.getElementById('callModal').classList.add('open');
+  document.body.style.overflow='hidden';
+  trackConversion('phone_intent');
+}
+function closeCallModal(){
+  document.getElementById('callModal').classList.remove('open');
+  document.body.style.overflow='';
+}
+function confirmCall(){
+  trackConversion('phone_click');
+  closeCallModal();
+  // Standard telephone URI. The browser/device handles the normal phone/dialer flow.
+  window.location.href = 'tel:' + PHONE;
+}
+document.getElementById('callModal').addEventListener('click', e => {
+  if(e.target.id === 'callModal') closeCallModal();
+});
+document.addEventListener('keydown', e => {
+  if(e.key === 'Escape') closeCallModal();
+});
+
+function trackConversion(eventName){
+  if(typeof gtag === 'function'){
+    gtag('event', eventName, {
+      doctor: 'Dr. Omar Eldanasory',
+      page_location: window.location.href
+    });
+  }
+  /*
+    After creating the Google Ads conversion action, add:
+    gtag('event', 'conversion', {'send_to':'AW-CONVERSION_ID/LABEL'});
+  */
+}
+</script>
+</body>
+</html>
